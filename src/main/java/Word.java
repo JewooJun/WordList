@@ -5,7 +5,7 @@ public class Word {
 	private String meaning;
 	
 	Word(){}
-	Word(int id, int level, String word, String meaning){
+	Word(int id, int level, String word, String meaning) {
 		this.id = id;
 		this.level = level;
 		this.word = word;
@@ -14,7 +14,7 @@ public class Word {
 	public int getId() {
 		return id;
 	}
-	
+
 	
 	public int getLevel() {
 		return level;
@@ -44,6 +44,9 @@ public class Word {
 		for(int i = 0; i < level; i++) slevel += "*";
 		String str = String.format("%-3s", slevel) + String.format("%15s", word) + " " + meaning;
 		return str;
+	}
+	public String toFIleString(){
+		return this.level + "|" + this.word + "|" + this.meaning;
 	}
 	
 }
